@@ -13,13 +13,18 @@ import Contents from './Contents'
 
 type AppProps = {}
 
+type ContentsProps = {|
+  text: string,
+  show: boolean,
+|}
+
 const Component = props => <Contents {...props} />
 
-const Enhance: HOC<*, AppProps> = compose(
+const Enhance: HOC<ContentsProps, AppProps> = compose(
   setDisplayName('App'),
   withStateHandlers(
     {
-      text: '',
+      text: 3,
       show: false,
     },
     {
