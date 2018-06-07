@@ -6,9 +6,10 @@
   "author": "Yoshitaka Terazawa <locol6622@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "flow": "flow",
     "build": "run-s lint && run-p parcel lint-watch",
     "parcel": "parcel src/index.html",
-    "lint": "eslint --fix src",
+    "lint": "eslint --fix src && npm run flow",
     "lint-watch": "chokidar src/*.js src/**/*.js -c 'npm run lint'",
     "precommit": "lint-staged"
   },
