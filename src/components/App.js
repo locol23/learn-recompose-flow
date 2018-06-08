@@ -7,8 +7,8 @@ import {
   withStateHandlers,
   lifecycle,
   pure,
-  type HOC,
 } from 'recompose'
+import type { HOC } from 'recompose'
 import Contents from './Contents'
 
 type AppProps = {}
@@ -24,7 +24,7 @@ const Enhance: HOC<ContentsProps, AppProps> = compose(
   setDisplayName('App'),
   withStateHandlers(
     {
-      text: 3,
+      text: 'text',
       show: false,
     },
     {
